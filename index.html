@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student Result</h1>
+    <label for="">
+        Total Number Of Physics: <input type="text" id="phyTotalMarks">
+    </label>
+    <br>
+    <label for="">
+        Obtained Number Of Physics: <input type="text" id="phyObtainedMarks">
+    </label>
+    <br>
+    <label for="">
+        Total Number Of Math: <input type="text"id="mathTotalMarks">
+    </label>
+    <br>
+    <label for="">
+        Obtained Number Of Math: <input type="text"id="mathObtainedMarks">
+    </label>
+    <br>
+    <label for="">
+        Total Number Of computer: <input type="text"id="computerTotalMarks">
+    </label>
+    <br>
+    <label for="">
+        Obtained Number Of computer: <input type="text"id="computerObtainedMarks">
+    </label>
+    <br>
+    <button onclick="Physics()">Physics</button>
+    <button onclick="math()">math</button>
+    <button onclick="computer()">computer</button>
+    
+
+    <div class="card">
+        <Table>
+            <tr>
+                <th>Subject</th>
+                <th>Total Number</th>
+                <th>Obtained Number</th>
+                <th>percentage</th>
+                
+                
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td id="physicsTotal"></td>
+                <td id="physicsObtain"></td>
+                <td id="percentage"></td>
+              
+            </tr>
+            <tr>
+                <td>Math</td>
+                <td id="mathTotal"></td>
+                <td id="mathObtain"></td>
+                <td id="value"></td>
+            </tr>
+            <tr>
+                <td>computer</td>
+                <td id="computerTotal"></td>
+                <td id="computerObtain"></td>
+                <td id="value1"></td>
+            </tr>
+            
+
+        </Table>
+    </div>
+
+    <script>
+        function Physics(){
+            let physicsTotalMark = Number(document.getElementById("phyTotalMarks").value);
+            let physicsObtainedMark = Number(document.getElementById("phyObtainedMarks").value);
+            document.getElementById("physicsTotal").innerText = physicsTotalMark
+            document.getElementById("physicsObtain").innerText = physicsObtainedMark
+
+            let percentage = (physicsObtainedMark / physicsTotalMark)*100 
+            console.log("percentage" , percentage);
+            document.getElementById("percentage").innerHTML= (physicsObtainedMark / physicsTotalMark) * 100
+        }
+        function math(){
+            let mathTotalMark = Number(document.getElementById("mathTotalMarks").value);
+            let mathObtainedMark = Number(document.getElementById("mathObtainedMarks").value);
+            document.getElementById("mathTotal").innerText = mathTotalMark
+            document.getElementById("mathObtain").innerText = mathObtainedMark
+
+            let percentage = (mathObtainedMark / mathTotalMark)*100 
+            console.log("percentage" , percentage);
+            document.getElementById("value").innerHTML= (mathObtainedMark / mathTotalMark) * 100
+
+        }
+        function computer(){
+            let computerTotalMark = Number(document.getElementById("computerTotalMarks").value);
+            let computerObtainedMark = Number(document.getElementById("computerObtainedMarks").value);
+            document.getElementById("computerTotal").innerText = computerTotalMark
+            document.getElementById("computerObtain").innerText = computerObtainedMark
+
+            let percentage = (computerObtainedMark / computerTotalMark)*100 
+            console.log("percentage" , percentage);
+            document.getElementById("value1").innerHTML= (computerObtainedMark / computerTotalMark) * 100
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>
